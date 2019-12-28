@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    RadarGraphView *radar = [[RadarGraphView alloc] init];
+    RadarGraphView *radar = [[RadarGraphView alloc] initWithTitles:@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"] titleFont:20];
+    radar.radius = 100;
     radar.backgroundColor = [UIColor whiteColor];
     radar.frame = CGRectInset(self.view.bounds, 0, 50);
     
@@ -35,7 +36,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    self.radar.values = @[@40, @50, @60, @70, @80];
+    self.radar.values = @[@24, @44, @55, @67, @90];
 }
 
 
