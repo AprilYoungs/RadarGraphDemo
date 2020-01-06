@@ -70,6 +70,18 @@
     self.titleLayers = texts;
 }
 
+- (void)setTitleStrColor:(UIColor *)titleStrColor
+{
+    if (_titleStrColor != titleStrColor)
+    {
+        _titleStrColor = titleStrColor;
+        for (CATextLayer *t in self.titleLayers)
+        {
+            t.foregroundColor = _titleStrColor.CGColor;
+        }
+    }
+}
+
 - (void)setValues:(NSArray<NSNumber *> *)values
 {
     if (_values != values)
